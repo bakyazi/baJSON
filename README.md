@@ -1,4 +1,4 @@
-# jsonconverter
+# toJSONto
 library for converting to/from json
 
 
