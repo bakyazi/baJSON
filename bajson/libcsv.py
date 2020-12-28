@@ -70,6 +70,22 @@ def create_row(obj, header):
     return row_dict
 
 
+def row_to_obj(row, header):
+    obj = {}
+    for i, head in enumerate(header):
+        if row[i]:
+            temp = obj
+            for h in head:
+                if h not in temp.keys():
+                    if h == head[-1]:
+                        temp[h] = row[i]
+                    else:
+                        temp[h] = {}
+                        temp = temp[h]
+                else:
+                    temp = temp[h]
+    return obj
+
 def json_to_csv(input_file=None, output_file=None, auto_id=False, header=None):
     if input_file == None or output_file == None:
         raise MissingParameterException(
@@ -95,8 +111,25 @@ def json_to_csv(input_file=None, output_file=None, auto_id=False, header=None):
                 writer.writerow(row_dict)
 
 
-# def csv_to_json(input_file=None,
-#                 output_file=None,
-#                 header_detection=False,
-#                 header=None):
-#     pass
+def csv_to_json(input_file=None,
+                output_file=None,
+                delimiter=';',
+                header=None):
+    if input_file == None or output_file == None:
+        raise MissingParameterException(
+            "parameters input_file and output_file must not be None")
+
+    line_number = 0
+    with open(input_file, "r") as input_file:
+        csv_reader = csv.reader(input_file, delimiter=delimiter)
+        result = []
+        for row in csv_reader:
+            if line_number == 0:
+                header = list(map(lambda c: c.split('.'), row))
+                line_number += 1
+            else:
+                json_obj = row_to_obj(row, header)
+                result.append(json_obj)
+        
+        with open(output_file, "w") as output_file:
+            json.dump(result, output_file, indent=2)
