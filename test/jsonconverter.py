@@ -1,4 +1,3 @@
-import unittest
+from tojsonto.tojsonto import json_to_csv
 
-def test_object_to_csv_row():
-    pass
+json_to_csv("test/assets/test.json", "output.csv")
