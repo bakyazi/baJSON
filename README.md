@@ -5,7 +5,7 @@ library for converting to/from json
 ### TODO
 
 - [ ] JSON to CSV
-  - [ ]  File support
+  - [X]  File support
   - [ ] String support
 - [ ] CSV to JSON
   - [x] File support
