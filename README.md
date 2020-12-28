@@ -1,4 +1,4 @@
-#  baJSON
+# bajson
 library for converting to/from json
 
 
