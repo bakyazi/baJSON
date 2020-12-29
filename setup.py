@@ -8,7 +8,7 @@ with open('README.md', 'r') as f:
 setuptools.setup(
     name="bajson",
 
-    version="0.0.5",
+    version="0.0.6",
     author="bakyazi",
     author_email="berkay.akyazi@gmail.com",
     description="library for converting to/from json",
