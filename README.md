@@ -4,6 +4,11 @@ library for converting to/from json
 [![pypi](http://img.shields.io/pypi/v/bajson.png)](https://pypi.python.org/pypi/bajson)
 [![Supported Python Versions](https://img.shields.io/pypi/pyversions/bajson.svg)](https://pypi.python.org/pypi/bajson/)
 
+## Install
+```bash
+ $ pip install bajson
+```
+
 ## Usage
 
 ### JSON to CSV
@@ -97,7 +102,7 @@ json_to_csv("input.json", "output.csv")
 
 ### CSV to JSON
 
-bajson can conver csv file to json format vice versa. Formats above are valid for this operation too. However there is one exception about array conversion,
+bajson can convert csv file to json format vice versa. Formats above are valid for this operation too. However there is one exception about array conversion,
 
 If csv headers are as follows
 
