@@ -1,6 +1,10 @@
 # bajson
 library for converting to/from json
 
+[![pypi](http://img.shields.io/pypi/v/bajson.png)](https://pypi.python.org/pypi/bajson)
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/bajson.svg)](https://pypi.python.org/pypi/bajson/)
+[![Downloads](https://img.shields.io/pypi/dm/bajson.svg)](https://pypistats.org/packages/bajson)
+[![License](https://img.shields.io/pypi/l/bajson.svg)](https://pypi.python.org/pypi/bajson/)
 
 ### TODO
 
